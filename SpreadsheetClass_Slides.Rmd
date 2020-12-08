@@ -1,0 +1,25 @@
+---
+title: "Designing Spreadsheets that Don't Suck"
+author: Ariel Deardorff, UCSF Data Services Librarian
+date: 12/8/2020
+output: 
+  revealjs::revealjs_presentation:
+    theme: simple
+    transition: none
+---
+
+## Welcome
+
+## Learning Objectives 
+
+By the end of this workshop you should be able to:
+
+* Describe best practices for reproducible data organization in spreadsheets
+* Design tidy spreadsheets that can be used in a wide variety of data analysis software
+
+## Another slide
+
+What goes on this slide?
+
+## Questions?
+
