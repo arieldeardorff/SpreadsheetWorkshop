@@ -117,6 +117,7 @@ Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)
 ## Tidy vs Messy Data
 
 ![Tidy vs Messy Data](Images/TidyvsMessy.png)
+Source: [Lowndes & Horst, 2020](https://docs.google.com/presentation/d/1N7hKepabvl9OrHjvGJWPjUsfzVdB5xzV5AsFndgSwms/edit#slide=id.p)
 
 ---
 
