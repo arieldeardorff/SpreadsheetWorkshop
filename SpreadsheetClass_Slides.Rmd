@@ -1,25 +1,65 @@
 ---
-title: "Designing Spreadsheets that Don't Suck"
-author: Ariel Deardorff, UCSF Data Services Librarian
-date: 12/8/2020
+title: "Designing Spreadsheets that Don't Suck" 
+author: "Ariel Deardorff <br> UCSF Data Services Librarian"
+date: "`r Sys.Date()`" 
+
 output: 
-  revealjs::revealjs_presentation:
-    theme: simple
-    transition: none
+  xaringan::moon_reader:
+    nature:
+      titleSlideClass: ["left", "middle", "inverse"]
+      css: [default, chocolate, chocolate-fonts]
 ---
 
-## Welcome
+class: center, middle
 
-## Learning Objectives 
+# Welcome
+
+---
+
+# Learning Objectives 
 
 By the end of this workshop you should be able to:
 
 * Describe best practices for reproducible data organization in spreadsheets
 * Design tidy spreadsheets that can be used in a wide variety of data analysis software
 
-## Another slide
+---
 
-What goes on this slide?
+## Why should I care about spreadsheets?
 
-## Questions?
+Spreadsheets are everywhere! 
+
+Terrible spreadsheets are everywhere too!
+
+---
+class: center, middle 
+
+![Image of Covid Excel Counting headline](Images/ExcelHeadline.png)
+
+???
+Presenter notes for Ariel
+
+---
+
+## What should my spreadsheets be called?
+
+---
+
+## How should my spreadsheets be structured?
+
+---
+
+## How should I keep my data coherant?
+
+---
+
+## What else can I do to keep my spreadsheets reproducible?
+
+---
+
+## How do I fix existing messy spreadsheets?
+
+---
+
+## Questions
 
