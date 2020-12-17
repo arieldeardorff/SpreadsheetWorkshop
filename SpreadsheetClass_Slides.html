@@ -3,20 +3,21 @@
   <head>
     <title>Designing Spreadsheets that Don't Suck</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Ariel Deardorff   UCSF Data Services Librarian" />
+    <meta name="author" content="Ariel Deardorff, MLIS   Data Services Librarian   UCSF Library" />
     <meta name="date" content="2020-12-17" />
-    <link href="SpreadsheetClass_Slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="SpreadsheetClass_Slides_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: left, middle, inverse, title-slide
 
 # Designing Spreadsheets that Don't Suck
-### Ariel Deardorff <br> UCSF Data Services Librarian
+### Ariel Deardorff, MLIS <br> Data Services Librarian <br> UCSF Library
 ### 2020-12-17
 
 ---
+
+
 
 
 class: center, middle
@@ -34,49 +35,120 @@ By the end of this workshop you should be able to:
 
 ---
 
-## Why should I care about spreadsheets?
+# Why should I care about spreadsheets?
 
 Spreadsheets are everywhere! 
 
-Terrible spreadsheets are everywhere too!
+--
+
+Terrible spreadsheets are everywhere too! 
+
+--
+&lt;br&gt;
+
+[Insert images of other messy spreadsheets here]
 
 ---
-class: center, middle 
+
+## Messy spreadsheets can have real consequences
+
+--
+
+&lt;br&gt;
 
 ![Image of Covid Excel Counting headline](Images/ExcelHeadline.png)
 
+&lt;br&gt;
+
 ???
-Presenter notes for Ariel
+Case study of the British Government 
 
 ---
 
-## What should my spreadsheets be called?
+class: left, middle
+
+## Thankfully there are some simple steps we can take to make our spreadsheets understandable &amp; reproducible!
 
 ---
 
-## How should my spreadsheets be structured?
+# What should my spreadsheets be called?
+
+Make those file names descriptive!
+&lt;br&gt;
+
+&lt;img src="Images/FileNaming.png" width="1923" height="30%" /&gt;
+source: [Briney, Coates, &amp; Goben, 2020](https://riojournal.com/article/56508/instance/5569704/)
 
 ---
 
-## How should I keep my data coherant?
+## Activity 1: Rename these files
+
+Take 5 minutes to look over this list of files and brainstorm some better names. Put your answers in the Etherpad
+
+[insert bad file name examples]
+
 
 ---
 
-## What else can I do to keep my spreadsheets reproducible?
+# How should my spreadsheets be structured?
+
+Follow the principles of Tidy Data!
+
+.pull-left[
+
+In Tidy Data:
+- Each variable forms a column
+- Each observation forms a row
+- Each cell is a single measurement]
+
+.pull-right[![tidy data image](Images/TidyDataBasic.png)]
+
+&lt;br&gt;
+&lt;br&gt;
+
+Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)
+
+
 
 ---
 
-## How do I fix existing messy spreadsheets?
+## Tidy vs Messy Data
+
+![Tidy vs Messy Data](Images/TidyvsMessy.png)
 
 ---
 
-## Questions
+## Activity 2: Reorganize a messy data spreadsheet
+
+[insert instructions here]
+
+---
+
+# How should I keep my data coherant?
+
+
+
+---
+
+# What else can I do to keep my spreadsheets reproducible?
+
+---
+
+# How do I fix existing messy spreadsheets?
+
+---
+
+# Learn More
+
+---
+
+class: left, middle
+
+# What Questions Do You Have?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"css": ["default", "chocolate", "chocolate-fonts"]
-});
+<script>var slideshow = remark.create();
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });

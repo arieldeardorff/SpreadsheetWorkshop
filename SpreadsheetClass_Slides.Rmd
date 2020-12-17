@@ -1,14 +1,24 @@
 ---
 title: "Designing Spreadsheets that Don't Suck" 
-author: "Ariel Deardorff <br> UCSF Data Services Librarian"
-date: "`r Sys.Date()`" 
+author: "Ariel Deardorff, MLIS <br> Data Services Librarian <br> UCSF Library"
+date: "`r Sys.Date()` "
 
 output: 
   xaringan::moon_reader:
+    css: xaringan-themer.css
     nature:
       titleSlideClass: ["left", "middle", "inverse"]
-      css: [default, chocolate, chocolate-fonts]
 ---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#058488",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
 
 class: center, middle
 
@@ -25,41 +35,116 @@ By the end of this workshop you should be able to:
 
 ---
 
-## Why should I care about spreadsheets?
+# Why should I care about spreadsheets?
 
 Spreadsheets are everywhere! 
 
-Terrible spreadsheets are everywhere too!
+--
+
+Terrible spreadsheets are everywhere too! 
+
+--
+<br>
+
+[Insert images of other messy spreadsheets here]
 
 ---
-class: center, middle 
+
+## Messy spreadsheets can have real consequences
+
+--
+
+<br>
 
 ![Image of Covid Excel Counting headline](Images/ExcelHeadline.png)
 
+<br>
+
 ???
-Presenter notes for Ariel
+Case study of the British Government 
 
 ---
 
-## What should my spreadsheets be called?
+class: left, middle
+
+## Thankfully there are some simple steps we can take to make our spreadsheets understandable & reproducible!
 
 ---
 
-## How should my spreadsheets be structured?
+# What should my spreadsheets be called?
+
+Make those file names descriptive!
+<br>
+
+```{r, eval= TRUE, echo=FALSE, out.height="30%"}
+knitr::include_graphics("Images/FileNaming.png")
+```
+source: [Briney, Coates, & Goben, 2020](https://riojournal.com/article/56508/instance/5569704/)
 
 ---
 
-## How should I keep my data coherant?
+## Activity 1: Rename these files
+
+Take 5 minutes to look over this list of files and brainstorm some better names. Put your answers in the Etherpad
+
+[insert bad file name examples]
+
 
 ---
 
-## What else can I do to keep my spreadsheets reproducible?
+# How should my spreadsheets be structured?
+
+Follow the principles of Tidy Data!
+
+.pull-left[
+
+In Tidy Data:
+- Each variable forms a column
+- Each observation forms a row
+- Each cell is a single measurement]
+
+.pull-right[![tidy data image](Images/TidyDataBasic.png)]
+
+<br>
+<br>
+
+Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)
+
+
 
 ---
 
-## How do I fix existing messy spreadsheets?
+## Tidy vs Messy Data
+
+![Tidy vs Messy Data](Images/TidyvsMessy.png)
 
 ---
 
-## Questions
+## Activity 2: Reorganize a messy data spreadsheet
+
+[insert instructions here]
+
+---
+
+# How should I keep my data coherant?
+
+
+
+---
+
+# What else can I do to keep my spreadsheets reproducible?
+
+---
+
+# How do I fix existing messy spreadsheets?
+
+---
+
+# Learn More
+
+---
+
+class: left, middle
+
+# What Questions Do You Have?
 
