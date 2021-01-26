@@ -4,7 +4,7 @@
     <title>Designing Spreadsheets that Don't Suck</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ariel Deardorff, MLIS   Data Services Librarian   UCSF Library" />
-    <meta name="date" content="2020-12-17" />
+    <meta name="date" content="2021-01-25" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -13,7 +13,7 @@ class: left, middle, inverse, title-slide
 
 # Designing Spreadsheets that Don't Suck
 ### Ariel Deardorff, MLIS <br> Data Services Librarian <br> UCSF Library
-### 2020-12-17
+### 2021-01-25
 
 ---
 
@@ -43,11 +43,6 @@ Spreadsheets are everywhere!
 
 Terrible spreadsheets are everywhere too! 
 
---
-&lt;br&gt;
-
-[Insert images of other messy spreadsheets here]
-
 ---
 
 ## Messy spreadsheets can have real consequences
@@ -62,6 +57,7 @@ Terrible spreadsheets are everywhere too!
 
 ???
 Case study of the British Government 
+- Also can't properly load your data into software tools if it isnt formatted properly (Tableau, OpenRefine, SPSS, Python)
 
 ---
 
@@ -73,21 +69,18 @@ class: left, middle
 
 # What should my spreadsheets be called?
 
-Make those file names descriptive!
-&lt;br&gt;
+Make those file (and variable) names descriptive!
 
-&lt;img src="Images/FileNaming.png" width="1923" height="30%" /&gt;
+---
+
+![](Images/FileNaming.png)&lt;!-- --&gt;
 source: [Briney, Coates, &amp; Goben, 2020](https://riojournal.com/article/56508/instance/5569704/)
 
 ---
 
-## Activity 1: Rename these files
+![](Images/VariableNaming.png)&lt;!-- --&gt;
 
-Take 5 minutes to look over this list of files and brainstorm some better names. Put your answers in the Etherpad
-
-[insert bad file name examples]
-
-
+source: [Broman &amp; Woo, 2017](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 ---
 
 # How should my spreadsheets be structured?
@@ -119,33 +112,72 @@ Source: [Lowndes &amp; Horst, 2020](https://docs.google.com/presentation/d/1N7hK
 
 ---
 
-## Activity 2: Reorganize a messy data spreadsheet
+# How should I keep my data coherant?
 
-[insert instructions here]
+* Come up with a system and write it down in a data dictionary or read me file!
+* Follow the international standard for dates: YYYYMMDD or YYYY-MM-DD or separate dates into columns for month, day, and year
+* Have a standard way of marking missing values (NA, NULL, etc) 
+* Don't use formatting to encode meaning (highlighted/bolded cells to indicate something)
 
 ---
 
-# How should I keep my data coherant?
+## Activity 2: Critique a messy data spreadsheet
 
+You will have 10 minutes in breakout rooms to critique the COVID spreadsheet.
+* What spreadsheet errors do you see?
+* How would you design it differently?
 
+Share your ideas in the etherpad and we will discuss as a group.
 
 ---
 
 # What else can I do to keep my spreadsheets reproducible?
 
+* Consider using data validation
+* Keep your raw data raw - analyze elsewhere
+* Save as a plain text file
+* Create a backup copy
+
 ---
 
 # How do I fix existing messy spreadsheets?
+Here are some tools and tutorials you can use if you are forced to work with messy spreadsheets:
+
+* OpenRefine - [tool](https://openrefine.org/), [tutorial](https://arieldeardorff.github.io/OpenRefineWorkshop/index.html) (open source data cleaning software)
+* R Tidyverse - [tool](https://www.tidyverse.org/), [tutorial](https://rstudio-conf-2020.github.io/r-for-excel/) (R package for cleaning spreadsheet data)
+* Python Pandas - [tool](https://pandas.pydata.org/), [tutorial](https://courses.ucsf.edu/course/view.php?id=5248) 
 
 ---
 
 # Learn More
+
+Check out these articles to learn more about tidy data or organizing data in spreadsheets:
+
+Briney KA, Coates H, Goben A (2020) Foundational Practices of Research Data Management. Research Ideas and Outcomes 6: e56508. [https://doi.org/10.3897/rio.6.e56508](https://doi.org/10.3897/rio.6.e56508)
+
+Broman, K. &amp; Woo, K (2018) Data Organization in Spreadsheets, The American Statistician, 72:1, 2-10, DOI: [10.1080/00031305.2017.1375989](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) 
+
+Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1 - 23. doi:[http://dx.doi.org/10.18637/jss.v059.i10](http://dx.doi.org/10.18637/jss.v059.i10)
 
 ---
 
 class: left, middle
 
 # What Questions Do You Have?
+
+---
+
+# References
+
+Briney KA, Coates H, Goben A (2020) Foundational Practices of Research Data Management. Research Ideas and Outcomes 6: e56508. [https://doi.org/10.3897/rio.6.e56508](https://doi.org/10.3897/rio.6.e56508)
+
+Broman, K. &amp; Woo, K (2018) Data Organization in Spreadsheets, The American Statistician, 72:1, 2-10, DOI: [10.1080/00031305.2017.1375989](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) 
+
+Lowndes, J. &amp; Horst, A. (2020) Tidy Data for Efficiency, Reproducibility, and Collaboration. OpenScapes [https://www.openscapes.org/blog/2020/10/12/tidy-data/](https://www.openscapes.org/blog/2020/10/12/tidy-data/)
+
+Sherry Lake, Tim Dennis, Jez Cope, Francois Michonneau, Christopher Erdmann, erikamias, … yvonnemery. (2020, July). LibraryCarpentry/lc-spreadsheets: LibraryCarpentry/lc-spreadsheets: Library Carpentry: Tidy data for Librarians, July 2020 (Version v2020.07.1). Zenodo. [http://doi.org/10.5281/zenodo.3954067](http://doi.org/10.5281/zenodo.3954067)
+
+Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1 - 23. doi:[http://dx.doi.org/10.18637/jss.v059.i10](http://dx.doi.org/10.18637/jss.v059.i10)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
