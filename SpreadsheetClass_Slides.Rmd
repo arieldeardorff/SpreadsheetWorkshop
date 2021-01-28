@@ -35,6 +35,10 @@ By the end of this workshop you should be able to:
 
 ---
 
+[insert before and after photos]
+
+---
+
 # Why should I care about spreadsheets?
 
 Spreadsheets are everywhere! 
@@ -67,24 +71,13 @@ class: left, middle
 
 ---
 
-# What should my spreadsheets be called?
+# Spreadsheets as part of a reproducible pipeline
 
-Make those file (and variable) names descriptive!
+* We recommend you use spreadsheets for data entry and data storage
+* Once data has been collected it is time to move on to another tool for data analysis and visualization
+* Data analysis in spreadsheets is messy, fraught with errors, and not easily reproduced
+* Instead you should use an analysis software tool like R, Python, SAS, STATA, Tableau
 
----
-
-```{r, eval= TRUE, echo=FALSE}
-knitr::include_graphics("Images/FileNaming.png")
-```
-source: [Briney, Coates, & Goben, 2020](https://riojournal.com/article/56508/instance/5569704/)
-
----
-
-```{r, eval= TRUE, echo=FALSE}
-knitr::include_graphics("Images/VariableNaming.png")
-```
-
-source: [Broman & Woo, 2017](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 ---
 
 # How should my spreadsheets be structured?
@@ -105,7 +98,7 @@ In Tidy Data:
 
 Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)
 
-
+[add messy examples]
 
 ---
 
@@ -116,7 +109,27 @@ Source: [Lowndes & Horst, 2020](https://docs.google.com/presentation/d/1N7hKepab
 
 ---
 
+# What names should I use?
+
+Make those variable (and file) names descriptive!
+
+```{r, eval= TRUE, echo=FALSE}
+knitr::include_graphics("Images/VariableNaming.png")
+```
+
+source: [Broman & Woo, 2017](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
+---
+
+```{r, eval= TRUE, echo=FALSE}
+knitr::include_graphics("Images/FileNaming.png")
+```
+source: [Briney, Coates, & Goben, 2020](https://riojournal.com/article/56508/instance/5569704/)
+
+---
+
 # How should I keep my data coherant?
+
+[break these into separate pages with photo examples]
 
 * Come up with a system and write it down in a data dictionary or read me file!
 * Follow the international standard for dates: YYYYMMDD or YYYY-MM-DD or separate dates into columns for month, day, and year
@@ -125,7 +138,7 @@ Source: [Lowndes & Horst, 2020](https://docs.google.com/presentation/d/1N7hKepab
 
 ---
 
-## Activity 2: Critique a messy data spreadsheet
+## Activity: Critique a messy data spreadsheet
 
 You will have 10 minutes in breakout rooms to critique the COVID spreadsheet.
 * What spreadsheet errors do you see?
