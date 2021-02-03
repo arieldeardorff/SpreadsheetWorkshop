@@ -35,7 +35,22 @@ By the end of this workshop you should be able to:
 
 ---
 
-[insert before and after photos]
+Our goal today is to talk about how we can turn this:
+
+<br>
+--
+
+```{r out.width = "75%", echo = FALSE}
+knitr::include_graphics("Images/SpreadsheetBefore.png")
+```
+
+--
+
+Into this:
+
+--
+
+![Image of Messy spreadsheet](Images/SpreadsheetAfter.png)
 
 ---
 
@@ -73,14 +88,15 @@ class: left, middle
 
 # Spreadsheets as part of a reproducible pipeline
 
-* We recommend you use spreadsheets for data entry and data storage
-* Once data has been collected it is time to move on to another tool for data analysis and visualization
+* Use spreadsheets for data entry and data storage
+* Once data has been collected it is time to move on to another tool for data analysis and visualization (like R, Python, SAS, STATA, or Tableau)
 * Data analysis in spreadsheets is messy, fraught with errors, and not easily reproduced
-* Instead you should use an analysis software tool like R, Python, SAS, STATA, Tableau
 
 ---
 
 # How should my spreadsheets be structured?
+
+--
 
 Follow the principles of Tidy Data!
 
@@ -93,12 +109,31 @@ In Tidy Data:
 
 .pull-right[![tidy data image](Images/TidyDataBasic.png)]
 
-<br>
-<br>
-
 Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)
 
-[add messy examples]
+---
+class: left
+
+Tidy Data
+
+![tidy data image](Images/TidyDataBasic.png)
+
+--
+
+Not Tidy Data
+
+.pull-left[
+
+
+![messy data image](Images/NotTidyDataOne.png)
+
+Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)]
+
+.pull-right[
+
+![messy data image](Images/NotTidyDataTwo.png)
+
+]
 
 ---
 
@@ -109,16 +144,28 @@ Source: [Lowndes & Horst, 2020](https://docs.google.com/presentation/d/1N7hKepab
 
 ---
 
-# What names should I use?
+class: left, middle
+
+## Once we have our structure down, it is time to look at your values and variables
+
+---
+
+## What names should I use?
 
 Make those variable (and file) names descriptive!
 
-```{r, eval= TRUE, echo=FALSE}
-knitr::include_graphics("Images/VariableNaming.png")
-```
+.pull-left[
+![Good variable names](Images/VariableNameGood.png)
+]
+
+.pull-right[
+![Bad variable names](Images/VariableNameBad.png)
+]
 
 source: [Broman & Woo, 2017](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 ---
+
+File names matter too!
 
 ```{r, eval= TRUE, echo=FALSE}
 knitr::include_graphics("Images/FileNaming.png")
@@ -127,18 +174,45 @@ source: [Briney, Coates, & Goben, 2020](https://riojournal.com/article/56508/ins
 
 ---
 
-# How should I keep my data coherant?
+## Dates
 
-[break these into separate pages with photo examples]
+Did you know there is an international standard for dates (ISO 8601)?
 
-* Come up with a system and write it down in a data dictionary or read me file!
-* Follow the international standard for dates: YYYYMMDD or YYYY-MM-DD or separate dates into columns for month, day, and year
-* Have a standard way of marking missing values (NA, NULL, etc) 
-* Don't use formatting to encode meaning (highlighted/bolded cells to indicate something)
+### .center[YYYY-MM-DD]
+
+Note that Excel can get real funky with dates!
+
+You can get around this by:
+* Changing your dates to text values rather than dates
+* Separating your dates into columns for year, month, and day
 
 ---
 
-## Activity: Critique a messy data spreadsheet
+## Null/Missing Values
+
+Be precise about whether data is missing or has a value of zero
+
+If data has a value of zero, write in a 0
+
+If data is missing, indicate with NA/NULL
+
+---
+
+## Avoid formatting in Excel
+
+Excel can make things beautiful but don't use formatting to add data to your spreadsheet.
+
+Don't use formatting to encode meaning (highlighted/bolded cells to indicate something). Add this information in a new cell/column
+
+---
+
+## Create a data dictionary!
+
+.center[Your future self will thank you!]
+
+---
+
+# Activity: Critique a messy data spreadsheet
 
 You will have 10 minutes in breakout rooms to critique the COVID spreadsheet.
 * What spreadsheet errors do you see?
@@ -150,10 +224,9 @@ Share your ideas in the etherpad and we will discuss as a group.
 
 # What else can I do to keep my spreadsheets reproducible?
 
-* Consider using data validation
-* Keep your raw data raw - analyze elsewhere
-* Save as a plain text file
-* Create a backup copy
+* Consider using data validation features in Excel during data entry
+* Save as a plain text file (CSV)
+* Create a backup copy!
 
 ---
 
