@@ -1,6 +1,10 @@
 # Designing Reproducible Spreadsheets
 
-This is the Github repo for my UCSF Library Workshop "Designing Reproducible Spreadsheets." If you have any ideas, suggestions, questions or comments feel free to open an issue, submit a pull request, or send me an email!
+This is the Github repo for my UCSF Library Workshop "Designing Reproducible Spreadsheets." 
+
+The class etherpad is here: [https://etherpad.wikimedia.org/p/UCSF_spreadsheetclass](https://etherpad.wikimedia.org/p/UCSF_spreadsheetclass)
+
+If you have any ideas, suggestions, questions or comments feel free to open an issue, submit a pull request, or send me an email!
 
 ----
 
