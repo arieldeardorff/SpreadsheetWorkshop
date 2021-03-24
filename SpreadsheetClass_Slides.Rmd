@@ -26,7 +26,7 @@ class: center, middle
 Please sign in on the etherpad (link in the chat)
 
 ???
-To toggle presenter mode, first press c to clone the window, then press p to enter presenter mode (share the screen on the other window)
+To toggle presenter mode, first press c to clone the window, then press p to enter presenter mode (share the screen on the other window) f for fullscreen
 
 ---
 
@@ -185,7 +185,7 @@ class: left, middle
 
 --
 
-Make those variable names descriptive!
+Make those variable (column) names descriptive!
 
 * Avoid spaces - use underscores, dashes or CamelCase
 * Avoid special characters (?|&"")
