@@ -1,7 +1,6 @@
 ---
 title: "Designing Reproducible Spreadsheets" 
 author: "Ariel Deardorff, MLIS <br> Data Services Librarian <br> UCSF Library"
-date: "`r Sys.Date()` "
 
 output: 
   xaringan::moon_reader:
@@ -23,6 +22,11 @@ style_mono_accent(
 class: center, middle
 
 # Welcome
+
+Please sign in on the etherpad (link in the chat)
+
+???
+To toggle presenter mode, first press c to clone the window, then press p to enter presenter mode (share the screen on the other window)
 
 ---
 
@@ -54,12 +58,6 @@ Into this:
 
 ---
 
-class: left, middle
-
-## But first, let's hear from you!
-
----
-
 # Why should I care about spreadsheets?
 
 Spreadsheets are everywhere! 
@@ -67,6 +65,11 @@ Spreadsheets are everywhere!
 --
 
 Terrible spreadsheets are everywhere too! 
+
+???
+- I bet that most of us have used a spreadsheet sometime this week, if not sometime already this morning. 
+- Spreadsheets are used for everything from finance, to program admin work to research to data science.
+- How many times have you opened up a spreadsheet and thought, what the heck does this mean?
 
 ---
 
@@ -81,8 +84,8 @@ Terrible spreadsheets are everywhere too!
 <br>
 
 ???
-Case study of the British Government 
-- Also can't properly load your data into software tools if it isnt formatted properly (Tableau, OpenRefine, SPSS, Python)
+- Back in October the news came out that the British Government had been undercounting their COVID-19 cases because they were storing all the data in a spreadsheet with each case as a new column - they hit the limit of columns in excel and didn't realize.
+- More likely consequence is that if your organization system is too bespoke you wont be able to load your data into other tools (like Tableau, Python, R) and other people won't be able to understand your data.
 
 ---
 
@@ -90,13 +93,20 @@ class: left, middle
 
 ## Thankfully there are some simple steps we can take to make our spreadsheets understandable & reproducible!
 
+???
+Nothing we are talking about today is rocket science, it is about implementing good practices and sticking with them.
+
 ---
 
-# Spreadsheets as part of a reproducible pipeline
+# Spreadsheets as part of a reproducible (research) pipeline
 
 * Use spreadsheets for data entry and data storage
 * Once data has been collected it is time to move on to another tool for data analysis and visualization (like R, Python, SAS, STATA, or Tableau)
 * Data analysis in spreadsheets is messy, fraught with errors, and not easily reproduced
+
+???
+- If we are being precise here, spreadsheets are not a great tools for data analysis. Ideally we collect data in spreadsheets, and then analyze in another tool. 
+- But we understand that sometimes you just need to pull some quick numbers, in which case excel can work.
 
 ---
 
@@ -116,6 +126,10 @@ In Tidy Data:
 .pull-right[![tidy data image](Images/TidyDataBasic.png)]
 
 Source: [Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)
+
+
+???
+- Tidy data was a term coined by statistician Hadley Wickham but you may also know this as database format or skinny data
 
 ---
 class: left
@@ -154,7 +168,7 @@ Source: [Lowndes & Horst, 2020](https://docs.google.com/presentation/d/1N7hKepab
 
 How should we re-arrange this data to make it Tidy? 
 
-Share your ideas in the etherpad!
+Share your ideas for new column headers in the etherpad!
 
 ![Messy Data Screenshot](Images/ActivityNotTidy.png)
 
@@ -169,7 +183,15 @@ class: left, middle
 
 ## What names should I use?
 
-Make those variable (and file) names descriptive!
+--
+
+Make those variable names descriptive!
+
+* Avoid spaces - use underscores, dashes or CamelCase
+* Avoid special characters (?|&"")
+* Be short but descriptive (what does "w." mean?)
+* Include units for clarity
+* Be consistent!
 
 .pull-left[
 ![Good variable names](Images/VariableNameGood.png)
@@ -184,6 +206,9 @@ source: [Broman & Woo, 2017](https://www.tandfonline.com/doi/full/10.1080/000313
 
 File names matter too!
 
+* Use meaningful file names that will sort
+* What crucial info will help you know exactly which file is which?
+
 ```{r, eval= TRUE, echo=FALSE}
 knitr::include_graphics("Images/FileNaming.png")
 ```
@@ -195,14 +220,19 @@ source: [Briney, Coates, & Goben, 2020](https://riojournal.com/article/56508/ins
 
 Did you know there is an international standard for dates (ISO 8601)?
 
+--
+
 ### .center[YYYY-MM-DD]
 
-Note that Excel can get real funky with dates!
+--
 
-You can get around this by:
+Note that Excel can get real funky with dates! You can get around this by:
 * Changing your dates to text values rather than dates
 * Separating your dates into columns for year, month, and day
 
+
+???
+This is especially great for file names because it sorts!
 ---
 
 ## Null/Missing Values
@@ -213,11 +243,15 @@ If data has a value of zero, write in a 0
 
 If data is missing, indicate with NA/NULL
 
+???
+- Note that the exact term you use can differ depending on what software you are planning on using (NA for R programming, NaN in python)
+- Either way you want to choose one method and stick to it, you can always change it later if you were consistent
+
 ---
 
 ## Avoid formatting in Excel
 
-Excel can make things beautiful but don't use formatting to add data to your spreadsheet.
+Excel can make things beautiful but don't use formatting to add crucial information to your spreadsheet.
 
 Don't use formatting to encode meaning (highlighted/bolded cells to indicate something). Add this information in a new cell/column
 
@@ -229,29 +263,47 @@ Don't use formatting to encode meaning (highlighted/bolded cells to indicate som
 
 source: [Broman & Woo, 2017](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 
+???
+Even if you set up the most beautiful understandable spreadsheet it is always useful to create a data dictionary where you can be specific about your variables and what they mean
+
 ---
 
 # Activity 2: Critique a messy data spreadsheet
 
 You will have 10 minutes in breakout rooms to critique [a messy spreadsheet of COVID data](https://github.com/arieldeardorff/SpreadsheetWorkshop/raw/master/COVIDData_Messy.xlsx) 
-* What spreadsheet errors do you see?
+* What spreadsheet issues do you see?
 * How would you design it differently?
 
 Note that this is real COVID data from Carbon Health that has been messed up for our class.
 
 Share your ideas in the etherpad and we will discuss as a group.
 
+???
+Ideas:
+- Standardize data, separate into year, month, date
+- Separate out swab test name and type (nasal, Nasopharyngeal)
+- collapse test results into one column (negative or positive)
+- Separate out co-morbidities and risks (change to yes/no)
+- Separate out vitals
+- get rid of red for missing data - change to NA
+- get rid of spaces in names
+- make variable names more specific (rr, sats, ctab)
+
 ---
 
 # What else can I do to keep my spreadsheets reproducible?
 
+--
+
 * Consider using data validation features in Excel during data entry
-* Save as a plain text file (CSV)
 * Create a backup copy!
 
 ---
 
 # How do I fix existing messy spreadsheets?
+
+--
+
 Here are some tools and tutorials you can use if you need to clean up already messy spreadsheets:
 
 * OpenRefine - [tool](https://openrefine.org/), [tutorial](https://arieldeardorff.github.io/OpenRefineWorkshop/index.html) (open source data cleaning software)
@@ -290,5 +342,5 @@ Lowndes, J. & Horst, A. (2020) Tidy Data for Efficiency, Reproducibility, and Co
 
 Sherry Lake, Tim Dennis, Jez Cope, Francois Michonneau, Christopher Erdmann, erikamias, … yvonnemery. (2020, July). LibraryCarpentry/lc-spreadsheets: LibraryCarpentry/lc-spreadsheets: Library Carpentry: Tidy data for Librarians, July 2020 (Version v2020.07.1). Zenodo. [http://doi.org/10.5281/zenodo.3954067](http://doi.org/10.5281/zenodo.3954067)
 
-Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1 - 23. doi:[http://dx.doi.org/10.18637/jss.v059.i10](http://dx.doi.org/10.18637/jss.v059.i10)
+Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1 - 23. doi:[http://dx.doi.org/10.18637/jss.v059.i10](http://dx.doi.org/10.18637/jss.v059.i10)  
 
